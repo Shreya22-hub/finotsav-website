@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Finotsav</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav>
+    <img src="Finotsav_2.png" class="nav-logo">
+</nav>
+
+<header>
+    <h1>Finotsav</h1>
+    <p>Plan Smart. Celebrate Stress-Free.</p>
+    <button onclick="scrollToForm()">Book Free Consultation</button>
+</header>
+
+<section class="why">
+    <h2>Why Choose Finotsav?</h2>
+    <div class="card">✔ Stress-Free Event Coordination</div>
+    <div class="card">✔ Transparent Budget Planning</div>
+    <div class="card">✔ Trusted Vendor Network</div>
+    <div class="card">✔ Financial Guidance & Loan Assistance</div>
+</section>
+
+<section class="process">
+    <h2>Our Process</h2>
+    <div class="card">1️⃣ Share Event Details</div>
+    <div class="card">2️⃣ Get Custom Plan & Budget</div>
+    <div class="card">3️⃣ Vendor Coordination</div>
+    <div class="card">4️⃣ Celebrate Tension-Free</div>
+</section>
+
+<section class="finance">
+    <h2>Financial Support</h2>
+    <p>
+        We assist in structured budgeting and partner-based financial support.
+        Our goal is to prevent overspending and guide families with smart EMI planning.
+    </p>
+</section>
+
+<section class="contact" id="contactForm">
+    <h2>Book Free Consultation</h2>
+
+    <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="tel" placeholder="Phone Number" required>
+        <input type="text" placeholder="Event Type">
+        <input type="text" placeholder="Budget Range">
+        <textarea placeholder="Additional Details"></textarea>
+        <button type="submit">Submit</button>
+    </form>
+</section>
+<section class="calculator">
+    <h2>Event Budget Calculator</h2>
+
+    <input type="number" id="guests" placeholder="Number of Guests">
+    <input type="number" id="catering" placeholder="Cost per Plate (₹)">
+    <input type="number" id="decoration" placeholder="Decoration Cost (₹)">
+    <input type="number" id="misc" placeholder="Miscellaneous Cost (₹)">
+
+    <button onclick="calculateBudget()">Calculate Budget</button>
+
+    <h3 id="totalCost"></h3>
+</section>
+<footer>
+    © 2026 Finotsav
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
