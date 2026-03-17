@@ -21,3 +21,18 @@ function calculateBudget(){
     document.getElementById("totalCost").innerHTML =
         "Estimated Total Budget: ₹ " + total.toLocaleString();
 }
+function revealOnScroll(){
+    const elements = document.querySelectorAll(".fade-in");
+
+    elements.forEach((el)=>{
+        const windowHeight = window.innerHeight;
+        const elementTop = el.getBoundingClientRect().top;
+
+        if(elementTop < windowHeight - 100){
+            el.classList.add("show");
+        }
+    });
+}
+
+window.addEventListener("scroll", revealOnScroll);
+window.addEventListener("load", revealOnScroll);
