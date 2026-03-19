@@ -36,3 +36,14 @@ function revealOnScroll(){
 
 window.addEventListener("scroll", revealOnScroll);
 window.addEventListener("load", revealOnScroll);
+window.addEventListener("scroll", function(){
+    if(window.scrollY > 300){
+        document.getElementById("topBtn").style.display = "block";
+    } else {
+        document.getElementById("topBtn").style.display = "none";
+    }
+});
+
+document.getElementById("topBtn").onclick = function(){
+    window.scrollTo({top:0, behavior:"smooth"});
+};
