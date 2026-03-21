@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 function scrollToForm(){
     document.getElementById("contactForm").scrollIntoView({
         behavior: "smooth"
@@ -48,7 +48,7 @@ window.addEventListener("scroll", function(){
 document.getElementById("topBtn").onclick = function(){
     window.scrollTo({top:0, behavior:"smooth"});
 };
-=======
+
 function scrollToForm(){
     document.getElementById("contactForm").scrollIntoView({
         behavior: "smooth"
@@ -98,4 +98,4 @@ window.addEventListener("scroll", function(){
 document.getElementById("topBtn").onclick = function(){
     window.scrollTo({top:0, behavior:"smooth"});
 };
->>>>>>> 097a49244a16a1e65b080bb9d49204dd5bf91740
+
