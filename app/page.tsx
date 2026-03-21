@@ -3,6 +3,7 @@ import Services from "./Services";
 import Gallery from "./Gallery";
 import Testimonials from "./Testimonials";
 import Pricing from "./Pricing";
+import Contact from "./Contact";
 export default function Home() {
   return (
     <>
@@ -27,6 +28,7 @@ export default function Home() {
       <Gallery />
       <Testimonials/>
       <Pricing />
+      <Contact />
     </>
   );
 }
