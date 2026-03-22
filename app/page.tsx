@@ -4,6 +4,8 @@ import Gallery from "./Gallery";
 import Testimonials from "./Testimonials";
 import Pricing from "./Pricing";
 import Contact from "./Contact";
+
+import Link from "next/link";
 export default function Home() {
   return (
     <>
@@ -17,10 +19,13 @@ export default function Home() {
         <p className="text-lg max-w-2xl mb-8 text-gray-400 leading-relaxed">
           From intimate gatherings to grand celebrations, we design unforgettable experiences tailored just for you.
         </p>
+        
 
-        <button className="bg-yellow-500 text-black px-8 py-3 rounded-full hover:scale-110 hover:shadow-[0_0_20px_#d4af37] transition duration-300 font-semibold">
-          Plan Your Event
-        </button>
+<Link href="/book">
+  <button className="bg-yellow-500 text-black px-8 py-3 rounded-full">
+    Plan Your Event
+  </button>
+</Link>
 
       </div>
       {/* SERVICES SECTION */}
