@@ -9,7 +9,7 @@ export default function Navbar() {
     <div className="fixed top-0 left-0 w-full flex justify-between items-center px-10 py-4 bg-black/30 backdrop-blur-md z-50">
       
       <Link href="/" className="text-xl font-bold text-yellow-500">
-        Finotsav
+        LagnaLink Finance & Occasions
       </Link>
 
       <div className="hidden md:flex gap-8 text-sm items-center text-white">

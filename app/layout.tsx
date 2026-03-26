@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Finotsav - Event Management & Financing",
+  title: "LagnaLink Finance & Occasions",
   description: "All-in-one event management and financing platform",
 };
 

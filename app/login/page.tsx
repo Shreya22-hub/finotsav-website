@@ -33,7 +33,7 @@ export default function LoginPage() {
         <h1 className="text-4xl font-bold text-center mb-2">
           Welcome <span className="text-yellow-500">Back</span>
         </h1>
-        <p className="text-center text-gray-400 mb-8">Login to your Finotsav account</p>
+        <p className="text-center text-gray-400 mb-8">Login to your LagnaLink Finance & Occasions account</p>
 
         <form onSubmit={handleSubmit} className="space-y-5 bg-gray-900 p-8 rounded-2xl border border-gray-800">
           <input
