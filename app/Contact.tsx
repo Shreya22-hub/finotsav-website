@@ -51,6 +51,7 @@ export default function Contact() {
         />
         <input
           type="date"
+          placeholder="Event Date"
           value={form.date}
           onChange={e => setForm({...form, date: e.target.value})}
           required
