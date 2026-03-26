@@ -32,7 +32,7 @@ export default function SignupPage() {
     <div className="min-h-screen bg-black text-white flex items-center justify-center px-4">
       <div className="w-full max-w-md">
         <h1 className="text-4xl font-bold text-center mb-2">
-          Join <span className="text-yellow-500">Finotsav</span>
+          Join <span className="text-yellow-500">LagnaLink Finance & Occasions</span>
         </h1>
         <p className="text-center text-gray-400 mb-8">Create your account today</p>
 
