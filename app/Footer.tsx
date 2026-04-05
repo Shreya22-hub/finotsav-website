@@ -67,11 +67,11 @@ export default function Footer() {
           <ul className="space-y-3 text-gray-500 text-sm">
             <li className="flex items-center gap-3">
               <span className="text-yellow-500">✉</span>
-              hello@utsavya.in
+              utsavya24@gmail.com
             </li>
             <li className="flex items-center gap-3">
               <span className="text-yellow-500">☎</span>
-              +91 98765 43210
+              +1 9713852440
             </li>
             <li className="flex items-center gap-3">
               <span className="text-yellow-500">⌖</span>

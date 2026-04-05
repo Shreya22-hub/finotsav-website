@@ -52,8 +52,8 @@ export default function Contact() {
           {/* Info panel */}
           <div className="md:col-span-2 space-y-6">
             {[
-              { icon: '✉', title: 'Email Us', val: 'hello@utsavya.in' },
-              { icon: '☎', title: 'Call Us', val: '+91 98765 43210' },
+              { icon: '✉', title: 'Email Us', val: 'utsavya24@gmail.com' },
+              { icon: '☎', title: 'Call Us', val: '+1 9713852440' },
               { icon: '⌖', title: 'Visit Us', val: 'New Delhi, India' },
             ].map(({ icon, title, val }) => (
               <div key={title} className="flex items-start gap-4">
@@ -95,7 +95,10 @@ export default function Contact() {
             </div>
             <div className="grid grid-cols-2 gap-4">
               <input
-                type="date"
+                type="text"
+                placeholder="Event Date"
+                onFocus={(e) => (e.target.type = "date")}
+                onBlur={(e) => (!e.target.value && (e.target.type = "text"))}
                 value={form.date}
                 onChange={e => setForm({ ...form, date: e.target.value })}
                 required
