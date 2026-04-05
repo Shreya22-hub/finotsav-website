@@ -170,17 +170,25 @@ export default function LoanPage() {
                   required
                   className={inputClass}
                 />
+                <input
+                  type="number"
+                  placeholder="Loan Amount Requesting (₹)"
+                  value={form.amount}
+                  onChange={e => setForm({ ...form, amount: e.target.value })}
+                  required
+                  className={inputClass}
+                />
                 <select
                   value={form.purpose}
                   onChange={e => setForm({ ...form, purpose: e.target.value })}
                   required
                   className={inputClass + ' cursor-pointer'}
                 >
-                  <option value="" disabled>Select Event Type</option>
-                  <option value="wedding">💍 Wedding</option>
-                  <option value="birthday">🎂 Birthday Party</option>
-                  <option value="corporate">🏢 Corporate Event</option>
-                  <option value="other">🎉 Other</option>
+                  <option value="" disabled className="bg-gray-900 text-white">Select Event Type</option>
+                  <option value="wedding" className="bg-gray-900 text-white">💍 Wedding</option>
+                  <option value="birthday" className="bg-gray-900 text-white">🎂 Birthday Party</option>
+                  <option value="corporate" className="bg-gray-900 text-white">🏢 Corporate Event</option>
+                  <option value="other" className="bg-gray-900 text-white">🎉 Other</option>
                 </select>
 
                 <button

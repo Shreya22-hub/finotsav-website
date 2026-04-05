@@ -26,7 +26,7 @@ export async function GET() {
   try {
     // Protect this endpoint — only logged-in users (admin)
     const session = await getServerSession(authOptions)
-    if (!session) {
+    if (!session || session.user?.email !== process.env.ADMIN_EMAIL) {
       return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 })
     }
 

@@ -24,11 +24,15 @@ export default function AdminPage() {
       fetch('/api/book').then(r => r.json()),
       fetch('/api/loan').then(r => r.json()),
     ]).then(([bookingData, loanData]) => {
+      if (bookingData.error === 'Unauthorized' || loanData.error === 'Unauthorized') {
+        router.push('/')
+        return
+      }
       setBookings(bookingData.bookings || [])
       setLoans(loanData.loans || [])
       setLoading(false)
     })
-  }, [status])
+  }, [status, router])
 
   if (status === 'loading') {
     return (

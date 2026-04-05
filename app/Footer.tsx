@@ -71,7 +71,7 @@ export default function Footer() {
             </li>
             <li className="flex items-center gap-3">
               <span className="text-yellow-500">☎</span>
-              +1 9713852440
+              +91 9713852440
             </li>
             <li className="flex items-center gap-3">
               <span className="text-yellow-500">⌖</span>
