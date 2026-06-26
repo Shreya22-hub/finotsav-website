@@ -1,4 +1,10 @@
 import mongoose from 'mongoose'
+import dns from 'dns'
+
+// Fix for Windows Node.js DNS SRV resolution issue with MongoDB Atlas
+dns.setDefaultResultOrder('ipv4first')
+dns.setServers(['8.8.8.8', '8.8.4.4', '1.1.1.1'])
+
 
 const MONGODB_URI = process.env.MONGODB_URI!
 

@@ -7,6 +7,7 @@ export default function LoanPage() {
   const [form, setForm] = useState({
     name: '', email: '', phone: '', amount: '', purpose: ''
   })
+  const [countryCode, setCountryCode] = useState('+91')
   const [status, setStatus] = useState('')
   const [emi, setEmi] = useState<number | null>(null)
 
@@ -26,7 +27,7 @@ export default function LoanPage() {
       const res = await fetch('/api/loan', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(form)
+        body: JSON.stringify({ ...form, phone: countryCode + form.phone })
       })
       const data = await res.json()
       if (data.success) {
@@ -162,14 +163,27 @@ export default function LoanPage() {
                   required
                   className={inputClass}
                 />
-                <input
-                  type="tel"
-                  placeholder="Phone Number"
-                  value={form.phone}
-                  onChange={e => setForm({ ...form, phone: e.target.value })}
-                  required
-                  className={inputClass}
-                />
+                <div className="flex bg-white/5 border border-white/10 rounded-xl overflow-hidden focus-within:border-yellow-500/60 focus-within:bg-yellow-500/5 transition-all duration-200">
+                  <select
+                    value={countryCode}
+                    onChange={e => setCountryCode(e.target.value)}
+                    className="bg-transparent text-white pl-4 pr-2 py-4 outline-none border-r border-white/10 cursor-pointer text-sm"
+                  >
+                    <option value="+91" className="bg-gray-900 text-white">🇮🇳 +91</option>
+                    <option value="+1" className="bg-gray-900 text-white">🇺🇸 +1</option>
+                    <option value="+44" className="bg-gray-900 text-white">🇬🇧 +44</option>
+                    <option value="+61" className="bg-gray-900 text-white">🇦🇺 +61</option>
+                    <option value="+971" className="bg-gray-900 text-white">🇦🇪 +971</option>
+                  </select>
+                  <input
+                    type="tel"
+                    placeholder="Phone Number"
+                    value={form.phone}
+                    onChange={e => setForm({ ...form, phone: e.target.value })}
+                    required
+                    className="w-full bg-transparent p-4 text-white placeholder-gray-600 focus:outline-none text-sm"
+                  />
+                </div>
                 <input
                   type="number"
                   placeholder="Loan Amount Requesting (₹)"
