@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { useSession, signOut } from 'next-auth/react'
 import { useState, useEffect } from 'react'
+import GoogleTranslate from './GoogleTranslate'
 
 export default function Navbar() {
   const { data: session } = useSession()
@@ -40,7 +41,7 @@ export default function Navbar() {
                <Image src="/logo.png" alt="Utsavya Logo" fill className="object-contain mix-blend-multiply" />
             </div>
           </div>
-          <span className="text-2xl font-black tracking-tight text-white drop-shadow-md">
+          <span className="notranslate text-2xl font-black tracking-tight text-white drop-shadow-md">
             Utsav<span className="text-yellow-500">ya</span>
           </span>
         </Link>
@@ -62,6 +63,7 @@ export default function Navbar() {
             <span className="absolute -bottom-0.5 left-0 w-0 h-px bg-yellow-500 group-hover:w-full transition-all duration-300" />
           </Link>
 
+          <GoogleTranslate />
           {session ? (
             <div className="flex items-center gap-4">
               <span className="text-yellow-500 text-sm font-medium">
@@ -127,7 +129,8 @@ export default function Navbar() {
             Loan
           </Link>
 
-          <div className="pt-2">
+          <div className="pt-2 flex flex-col gap-4">
+            <GoogleTranslate />
             {session ? (
               <div className="flex flex-col gap-3">
                 <p className="text-yellow-500 font-medium">Hi, {session.user?.name?.split(' ')[0]}! 👋</p>
@@ -141,7 +144,7 @@ export default function Navbar() {
             ) : (
               <Link
                 href="/login"
-                className="inline-block bg-yellow-500 text-black px-6 py-2 rounded-full font-semibold hover:bg-yellow-400 transition-all"
+                className="inline-block bg-yellow-500 text-black px-6 py-2 rounded-full font-semibold hover:bg-yellow-400 transition-all w-fit"
                 onClick={() => setMenuOpen(false)}
               >
                 Login

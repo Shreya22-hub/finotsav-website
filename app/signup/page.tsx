@@ -57,7 +57,7 @@ export default function SignupPage() {
 
         <div className="glass-card rounded-2xl p-8">
           <h1 className="text-2xl font-bold text-center mb-1">
-            Join <span className="text-yellow-500">Utsavya</span>
+            Join <span className="notranslate text-yellow-500">Utsavya</span>
           </h1>
           <p className="text-center text-gray-500 text-sm mb-8">Create your account to get started</p>
 

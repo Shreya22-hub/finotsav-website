@@ -16,7 +16,7 @@ const reviews = [
   {
     name: 'Priya Kapoor',
     role: 'Birthday Celebration',
-    text: 'Our birthday event was absolutely शानदार! Loved every single detail — the décor, the food, the ambiance. Utsavya truly exceeded our expectations.',
+    text: <>Our birthday event was absolutely शानदार! Loved every single detail — the décor, the food, the ambiance. <span className="notranslate">Utsavya</span> truly exceeded our expectations.</>,
     rating: 5,
     initials: 'PK',
   },

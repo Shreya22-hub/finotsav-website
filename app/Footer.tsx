@@ -14,7 +14,7 @@ export default function Footer() {
                 <Image src="/logo.png" alt="Utsavya Logo" fill className="object-contain mix-blend-multiply" />
               </div>
             </div>
-            <span className="text-2xl font-black tracking-tight drop-shadow-md">
+            <span className="notranslate text-2xl font-black tracking-tight drop-shadow-md">
               Utsav<span className="text-yellow-500">ya</span>
             </span>
           </div>
@@ -88,7 +88,7 @@ export default function Footer() {
       </div>
 
       <div className="max-w-6xl mx-auto pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-3 text-gray-600 text-xs">
-        <p>© {new Date().getFullYear()} Utsavya. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} <span className="notranslate">Utsavya</span>. All rights reserved.</p>
         <p>Made with ❤️ in India</p>
       </div>
     </footer>

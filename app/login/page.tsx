@@ -53,7 +53,7 @@ export default function LoginPage() {
           <h1 className="text-2xl font-bold text-center mb-1">
             Welcome <span className="text-yellow-500">Back</span>
           </h1>
-          <p className="text-center text-gray-500 text-sm mb-8">Sign in to your Utsavya account</p>
+          <p className="text-center text-gray-500 text-sm mb-8">Sign in to your <span className="notranslate">Utsavya</span> account</p>
 
           <form onSubmit={handleSubmit} className="space-y-4">
             <input
